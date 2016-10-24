@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-curl -o Brewfile https://gist.githubusercontent.com/kevinelliott/7a152c556a83b322e0a8cd2df128235c/raw/2-macOS-10.12-sierra-setup-brewfile
-
-brew bundle install
-
 # ~/.macos — https://mths.be/macos
 
 # Close any open System Preferences panes, to prevent them from overriding
