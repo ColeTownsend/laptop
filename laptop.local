@@ -1,70 +1,8 @@
-brew bundle --file=- <<EOF
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/services'
-brew 'ack'
-brew 'autoconf'
-brew 'autojump'
-brew 'xz'
-brew 'automake'
-brew 'colordiff'
-brew 'libpng'
-brew 'freetype'
-brew 'git'
-brew 'hub'
-brew 'icoutils'
-brew 'libtool'
-brew 'jpeg'
-brew 'libtiff'
-brew 'imagemagick'
-brew 'openssl'
-brew 'libevent'
-brew 'memcached'
-brew 'libmemcached'
-brew 'libxml2'
-brew 'mas'
-brew 'mysql'
-brew 'postgresql'
-brew 'wget'
-cask 'atom'
-cask 'dropbox'
-cask 'google-chrome'
-cask 'sonos'
-cask 'spotify'
-cask 'sketch'
-cask 'screenhero'
-cask 'licecap'
-cask 'macdown'
-cask 'keka'
-cask 'goofy'
-cask 'bartender'
-cask 'flux'
-cask 'screenflick'
-cask 'airvpn'
-cask 'spectacle'
-cask 'qlcolorcode' 
-cask 'qlstephen' 
-cask 'qlmarkdown' 
-cask 'quicklook-json'
-cask 'qlprettypatch' 
-cask 'quicklook-csv' 
-cask 'betterzipql' 
-cask 'qlimagesize' 
-cask 'webpquicklook' 
-cask 'suspicious-package'
-cask 'visual-studio-code'
-cask 'skype'
-cask 'slack-beta'
-
-mas 'LookUp', id: 965041401
-mas 'Sip', id: 507257563
-mas 'Pages', id: 409201541
-mas 'Todoist', id: 585829637
-EOF
-
 #!/usr/bin/env bash
+
+curl -o Brewfile https://gist.githubusercontent.com/kevinelliott/7a152c556a83b322e0a8cd2df128235c/raw/2-macOS-10.12-sierra-setup-brewfile
+
+brew bundle install
 
 # ~/.macos — https://mths.be/macos
 
