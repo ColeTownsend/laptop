@@ -1,3 +1,5 @@
-curl -o Brewfile https://gist.githubusercontent.com/kevinelliott/7a152c556a83b322e0a8cd2df128235c/raw/2-macOS-10.12-sierra-setup-brewfile
+curl -o Brewfile https://gist.githubusercontent.com/ColeTownsend/e0c49a593a57be88d853e64c63b38475/raw/dd31f1d1a47c9907e002fb4c04f591b37006c5aa/2-macOS-10.12-sierra-setup-brewfile
 
-brew bundle install
+brew bundle install  
+
+./.macos
