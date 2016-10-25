@@ -1,6 +1,13 @@
 curl -o Brewfile https://gist.githubusercontent.com/ColeTownsend/e0c49a593a57be88d853e64c63b38475/raw/dd31f1d1a47c9907e002fb4c04f591b37006c5aa/2-macOS-10.12-sierra-setup-brewfile
 
 brew bundle install
-
 apm install sync-settings
+
+chsh -s $(which zsh)
+git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+brew tap thoughtbot/formulae
+env RCRC=$HOME/dotfiles/rcrc rcup
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 ./.macos
