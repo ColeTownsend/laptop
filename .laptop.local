@@ -1,5 +1,6 @@
 curl -o Brewfile https://gist.githubusercontent.com/ColeTownsend/e0c49a593a57be88d853e64c63b38475/raw/dd31f1d1a47c9907e002fb4c04f591b37006c5aa/2-macOS-10.12-sierra-setup-brewfile
 
-brew bundle install  
+brew bundle install
 
+apm install sync-settings
 ./.macos
