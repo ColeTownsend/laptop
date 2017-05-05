@@ -15,6 +15,7 @@ We support:
 * macOS Mavericks (10.9)
 * macOS Yosemite (10.10)
 * macOS El Capitan (10.11)
+* macOS Sierra (10.12)
 
 Older versions may work but aren't regularly tested. Bug reports for older
 versions are welcome.
@@ -89,17 +90,19 @@ Image tools:
 
 Testing tools:
 
-* [Qt] for headless JavaScript testing via Capybara Webkit
+* [Qt 5] for headless JavaScript testing via [Capybara Webkit]
 
-[Qt]: http://qt-project.org/
+[Qt 5]: http://qt-project.org/
+[Capybara Webkit]: https://github.com/thoughtbot/capybara-webkit
 
-Programming languages and configuration:
+Programming languages, package managers, and configuration:
 
 * [Bundler] for managing Ruby libraries
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * [Rbenv] for managing versions of Ruby
 * [Ruby Build] for installing Rubies
 * [Ruby] stable for writing general-purpose code
+* [Yarn] for managing JavaScript packages
 
 [Bundler]: http://bundler.io/
 [ImageMagick]: http://www.imagemagick.org/
@@ -108,6 +111,7 @@ Programming languages and configuration:
 [Rbenv]: https://github.com/sstephenson/rbenv
 [Ruby Build]: https://github.com/sstephenson/ruby-build
 [Ruby]: https://www.ruby-lang.org/en/
+[Yarn]: https://yarnpkg.com/en/
 
 Databases:
 
@@ -198,7 +202,7 @@ you agree to abide by the thoughtbot [code of conduct].
 License
 -------
 
-Laptop is © 2011-2016 thoughtbot, inc.
+Laptop is © 2011-2017 thoughtbot, inc.
 It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
@@ -207,7 +211,7 @@ and may be redistributed under the terms specified in the [LICENSE] file.
 About thoughtbot
 ----------------
 
-![thoughtbot](https://thoughtbot.com/logo.png)
+![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
 
 Laptop is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.

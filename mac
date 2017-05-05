@@ -58,11 +58,26 @@ else
   sudo chown -R "$LOGNAME:admin" "$HOMEBREW_PREFIX"
 fi
 
+update_shell() {
+  local shell_path;
+  shell_path="$(which zsh)"
+
+  fancy_echo "Changing your shell to zsh ..."
+  if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    fancy_echo "Adding '$shell_path' to /etc/shells"
+    sudo sh -c "echo $shell_path >> /etc/shells"
+  fi
+  chsh -s "$shell_path"
+}
+
 case "$SHELL" in
-  */zsh) : ;;
+  */zsh)
+    if [ "$(which zsh)" != '/bin/zsh' ] ; then
+      update_shell
+    fi
+    ;;
   *)
-    fancy_echo "Changing your shell to zsh ..."
-      chsh -s "$(which zsh)"
+    update_shell
     ;;
 esac
 
@@ -117,18 +132,23 @@ brew "hub"
 brew "imagemagick"
 
 # Testing
-brew "qt"
+brew "qt@5.5"
 
-# Programming languages
+# Programming languages and package managers
 brew "libyaml" # should come after openssl
 brew "node"
 brew "rbenv"
 brew "ruby-build"
+brew "yarn"
 
 # Databases
 brew "postgres", restart_service: true
 brew "redis", restart_service: true
 EOF
+
+fancy_echo "Symlink qmake binary to /usr/local/bin for Capybara Webkit..."
+brew unlink qt@5.5
+brew link --force qt@5.5
 
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
